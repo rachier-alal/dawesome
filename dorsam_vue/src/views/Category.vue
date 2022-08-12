@@ -38,11 +38,11 @@ export default {
     },
     methods: {
         async getCategory() {
-            const category_slug = this.$route.params.category_slug
+            const categorySlug = this.$route.params.category_slug
              this.$store.commit('setIsLoading', true)
 
              axios
-                .get(`/api/v1/products/${category_slug}/`)
+                .get(`/api/v1/products/${categorySlug}/`)
                 .then(response => {
                     this.category = response.data
 
