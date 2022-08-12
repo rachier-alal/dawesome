@@ -1,7 +1,7 @@
 from pyexpat import model
 from rest_framework import serializers
 
-from .models import Product
+from .models import Category, Product
 
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
@@ -14,4 +14,17 @@ class ProductSerializer(serializers.ModelSerializer):
             'price',
             'get_image',
             'get_thumbnail',
+        )
+        
+        
+class CategorySerializer(serializers.ModelSerializer):
+    products = ProductSerializer(many=True)
+    class Meta:
+        model = Category
+        fields = (
+            'id',
+            'name',
+            'products',      
+            'get_absolute_url',
+
         )
