@@ -56,3 +56,4 @@ def search(request):
     else:
         return Response({'products': []})
 
+ 
