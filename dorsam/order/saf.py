@@ -1,7 +1,5 @@
 import requests
 
-​
-
 headers = {
 
   'Content-Type': 'application/json',
@@ -9,8 +7,6 @@ headers = {
   'Authorization': 'Bearer zrwqlEm1PG3nlt2AX1Ex6cRLvVrF'
 
 }
-
-​
 
 payload = {
 
@@ -37,8 +33,6 @@ payload = {
     "TransactionDesc": "Payment of X" 
 
   }
-
-​
 
 response = requests.request("POST", 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest', headers = headers, data = payload)
 
