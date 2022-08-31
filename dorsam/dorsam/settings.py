@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STRIPE_SECRET_KEY = 'sk_test_51LckWcB0bTIyDLoDnGBmCJX0wNiOFxPGEP82vp1uOatgAEI6G7C6EKeYsPl2hmqxHCe4ByiLnZlV7deRRwfEKEje00auucBLGk'
 
 # Application definition
 
